@@ -1,3 +1,6 @@
-export default function(){
-    console.log("test");
-}
+import angular from "angular"
+import "./core/core.module"
+
+angular.element(document).ready(function () {
+    angular.bootstrap(document), ["app"]
+})

@@ -3,12 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {
-    "gulp": "^3.9.0"
-  },
   "devDependencies": {
-    "jspm": "^0.16.32",
-    "gulp-server-livereload": "^1.4.0"
+    "gulp": "^3.9.1",
+    "gulp-inject": "^4.0.0",
+    "gulp-server-livereload": "^1.4.0",
+    "jspm": "^0.16.32"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,6 +16,8 @@
   "license": "ISC",
   "jspm": {
     "dependencies": {
+      "angular": "github:angular/bower-angular@^1.5.5",
+      "angular-ui-router": "github:angular-ui/ui-router@^0.2.18",
       "bootstrap": "github:twbs/bootstrap@^3.3.6",
       "css": "github:systemjs/plugin-css@^0.1.20",
       "jquery": "npm:jquery@^2.2.3"
