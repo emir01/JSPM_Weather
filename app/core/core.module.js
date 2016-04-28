@@ -1,12 +1,11 @@
 import angular from "angular";
 import "angular-ui-router";
-import {WeatherController} from "../weather_component/weather.controller"
+import { WeatherController } from "../weather_component/weather.controller"
 import tpl  from "../weather_component/weather.html!"
+import runBlock from "./runBlock";
 
-console.log("CORE MODULE");
-
-let appModule = angular.module("app", ["ui.router"])
-    .config(($stateProvider)=> {
+angular.module("app", ["ui.router"])
+    .config(($stateProvider, $rootScopeProvider)=> {
            $stateProvider.state('home', {
                 url: '/',
                 views: {
@@ -18,5 +17,6 @@ let appModule = angular.module("app", ["ui.router"])
                 }
             });
         })
+    .run(runBlock)
     .controller("WeatherController", WeatherController);
         

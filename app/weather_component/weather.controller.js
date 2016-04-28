@@ -1,6 +1,6 @@
 
 export class WeatherController {
     constructor(){
-        this.location = ""
+        this.location = "from class controller"
     }
 }
