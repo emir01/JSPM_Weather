@@ -2,10 +2,10 @@ import angular from "angular";
 import "angular-ui-router";
 import { WeatherController } from "../weather_component/weather.controller"
 import tpl  from "../weather_component/weather.html!"
-import runBlock from "./runBlock";
 
 angular.module("app", ["ui.router"])
-    .config(($stateProvider, $rootScopeProvider)=> {
+    .config(($stateProvider, $urlRouterProvider)=> {
+         $urlRouterProvider.otherwise("/")
            $stateProvider.state('home', {
                 url: '/',
                 views: {
@@ -16,7 +16,5 @@ angular.module("app", ["ui.router"])
                     }
                 }
             });
-        })
-    .run(runBlock)
+            })
     .controller("WeatherController", WeatherController);
-        
